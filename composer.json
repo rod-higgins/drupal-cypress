@@ -1,0 +1,37 @@
+{
+    "name": "rod/drupal-cypress",
+    "description": "Drupal 10 build with cypress and quality checks on Lando with docker",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "RodHiggins\\DrupalCypress\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rod Higgins",
+            "email": "rod.higgins@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/rod-higgins/cypress-drupal"
+        }
+    ],
+    "require": {
+        "rod-higgins/cypress-drupal": "^1.0.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "zaporylie/composer-drupal-optimizations": true,
+            "drupal/core-composer-scaffold": true,
+            "cweagans/composer-patches": true,
+            "composer/installers": true
+        }
+    }
+}
